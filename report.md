@@ -74,3 +74,6 @@ This agent was able to solve the envronment in 102 epsodes with an average score
 Below is a plot of the score for each episode
 
 ![image](results.png)
+
+### Future Work
+There are several ways to extend this project.  The first is to use prioritized experience replay, which places greater weight on experiences with a larger difference between the target Q and expected Q.  The next is to train the agent on the crawler environment which is more challenging.  Another is to implement another learning algorithm such as A3C or PPO.
