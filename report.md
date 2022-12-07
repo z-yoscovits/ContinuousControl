@@ -31,42 +31,42 @@ The algoritm works a follows:
                 
 
 ### Network Architecture
-The Actor network used here is:
-State Input
-Batch Normalization
-256 Fully Connected units
-Batch Normalization
-Relu Activation
-128 Fully Connected units
-Batch Normalization
-Relu Activation
-Action Size Fully Connected units with Hyperbolic Tangent Activation
+The Actor network used here is:  
+State Input  
+Batch Normalization  
+256 Fully Connected units  
+Batch Normalization  
+Relu Activation  
+128 Fully Connected units  
+Batch Normalization  
+Relu Activation  
+Action Size Fully Connected units with Hyperbolic Tangent Activation  
 
-The Critic network used here is:
-State Input
-Batch Normalization
-256 Fully Connected units
-Batch Normalization
-Leaky Relu Activation
-Concatenate with Action Input
-128 Fully Connected units
-Batch Normalization
-Leaky Relu Relu Activation
-1 Linear Node
+The Critic network used here is:  
+State Input  
+Batch Normalization  
+256 Fully Connected units  
+Batch Normalization  
+Leaky Relu Activation  
+Concatenate with Action Input  
+128 Fully Connected units  
+Batch Normalization  
+Leaky Relu Relu Activation  
+1 Linear Node  
 
 ### Hyperparameters
-I use the Following hyperparameters:
-update_every=20: Number of timesteps before the agent learns (N in step 7 above)
-learn_n_times=10: Number of times to train the networks (M in step 7 above)
-noise_scale=0.2:  The initaal Standard Deviation of the added gaussian noise
-noise_decay=0.9999: Each time the Agent learns it multiplies the noise scale by this
-lr_actor = 1e-3: The learning Rate for the Actor network
-lr_critic = 1e-3: The learning Rate for the Critic Network
-BUFFER_SIZE = int(1e6):  The replay buffer size
-BATCH_SIZE = 128: The training minibatch size
-GAMMA = 0.99: The reward discount factor
-TAU = 1e-3: For the soft update of target parameters
-WEIGHT_DECAY = 0: L2 weight decay for the Critic Network
+I use the Following hyperparameters:  
+update_every=20: Number of timesteps before the agent learns (N in step 7 above)  
+learn_n_times=10: Number of times to train the networks (M in step 7 above)  
+noise_scale=0.2:  The initaal Standard Deviation of the added gaussian noise  
+noise_decay=0.9999: Each time the Agent learns it multiplies the noise scale by this amount  
+lr_actor = 1e-3: The learning Rate for the Actor network  
+lr_critic = 1e-3: The learning Rate for the Critic Network  
+BUFFER_SIZE = int(1e6):  The replay buffer size  
+BATCH_SIZE = 128: The training minibatch size  
+GAMMA = 0.99: The reward discount factor  
+TAU = 1e-3: For the soft update of target parameters  
+WEIGHT_DECAY = 0: L2 weight decay for the Critic Network  
 
 
 ### Results
